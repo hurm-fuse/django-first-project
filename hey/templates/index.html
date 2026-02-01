@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Home
+{% endblock title %}
+{% block body %}
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #ffffff;
+        color: #222;
+    }
+
+    #hero img {
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 15%;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Hero */
+    #hero {
+        background: #ff2b2b;
+        color: white;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: 42px;
+    }
+
+    #hero button {
+        background: white;
+        color: #ff2b2b;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    /* About */
+    #about {
+        background: #fff;
+        color: #ff2b2b;
+        text-align: center;
+    }
+
+    #about button {
+        background: #ff2b2b;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    /* Contact */
+    #contact {
+        background: #f9f9f9;
+        text-align: center;
+    }
+
+    #contact form {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #contact input[type="submit"] {
+        background: #ff2b2b;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Hover */
+    button:hover,
+    input[type="submit"]:hover {
+        opacity: 0.85;
+    }
+</style>
+<section id="hero">
+    <img src="{% static 'file.png' %}" alt="">
+    <h1>Hey, I am Ibrahim web dev</h1>
+    <p>i want to make money using my web dev skill</p>
+    <button>Hire Me</button>
+</section>
+<section id="about">
+    <h1>I am unique web dev that make $10,000 website</h1>
+    <p>i am a person that love coding and i want to coding everyday</p>
+    <button>About Me</button>
+</section>
+<section id="contact">
+    <h1>Contact Me</h1>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <br>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <br>
+        <textarea name="message" placeholder="Tell about your website and app" rows="4" required></textarea>
+        <br>
+        <input type="submit" value="Send">
+    </form>
+</section>
+{% endblock body %}

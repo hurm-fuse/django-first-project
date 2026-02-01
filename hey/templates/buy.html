@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Buy Coffee{% endblock title %}
+
+{% block body %}
+<style>
+    /* Buy Page */
+    #buy {
+        text-align: center;
+        padding: 70px 15%;
+        background: #ffffff;
+        color: #222;
+    }
+
+    /* Heading */
+    #buy h1 {
+        color: #ff2b2b;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    /* Subheading / Paragraph */
+    #buy p {
+        font-size: 18px;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    /* QR Image */
+    #buy img {
+        max-width: 250px;
+        margin-top: 15px;
+        border: 3px solid #ff2b2b;
+        border-radius: 12px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button */
+    #buy button {
+        margin-top: 25px;
+        background: #ff2b2b;
+        color: white;
+        border: none;
+        padding: 12px 26px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    #buy button:hover {
+        opacity: 0.9;
+    }
+
+    /* Thank you note */
+    #buy .thankyou {
+        margin-top: 30px;
+        font-size: 16px;
+        color: #555;
+    }
+</style>
+
+<section id="buy">
+    <h1>Support Me ❤️</h1>
+    <p>If you like my work and want to help me grow, you can support me by giving a small donation.</p>
+
+    <p>Scan this QR code:</p>
+    <img src="{% static 'img.png' %}" alt="QR Code">
+
+    <p class="thankyou">Your support means a lot and helps me create more amazing projects! 🙏</p>
+</section>
+{% endblock body %}

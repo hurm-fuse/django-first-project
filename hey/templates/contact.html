@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %} About
+{% endblock title %}
+{% block body %}
+<style>
+    #contact {
+        padding: 70px 15%;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    #contact h1 {
+        color: #ff2b2b;
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+
+    /* Form */
+    #contact form {
+        max-width: 420px;
+        margin: 0 auto 40px;
+    }
+
+    #contact input,
+    #contact textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 15px;
+    }
+
+    #contact input[type="submit"] {
+        background: #ff2b2b;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    #contact input[type="submit"]:hover {
+        opacity: 0.9;
+    }
+
+    /* Details */
+    #contact .details,
+    #contact .social-media {
+        margin-top: 25px;
+    }
+
+    #contact h2 {
+        font-size: 18px;
+        color: #333;
+        margin: 6px 0;
+    }
+
+    #contact a {
+        color: #ff2b2b;
+        text-decoration: none;
+    }
+
+    #contact a:hover {
+        text-decoration: underline;
+    }
+</style>
+<section id="contact">
+    <h1>Contact Me</h1>
+    <form action="/" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <br>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <br>
+        <textarea name="message" placeholder="Tell about your website and app" rows="4" required></textarea>
+        <br>
+        <input type="submit" value="Send">
+    </form>
+
+    <div class="details">
+        <h2>Email: byteburial@gmail.com</h2>
+        <h2>Phone number: +91 8595507101</h2>
+    </div>
+
+    <div class="social-media">
+        <h2>Youtube: <a href="https://www.youtube.com/@buildwithibrahim">Build With Ibrahim</a></h2>
+        <h2>Instagram: <a href="https://www.instagram.com/bitch_i_am_ibrahim">bitch_i_am_ibrahim</a></h2>
+    </div>
+</section>
+{% endblock body %}

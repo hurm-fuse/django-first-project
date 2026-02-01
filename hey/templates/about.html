@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<style>
+    #about {
+        padding: 70px 15%;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    #about h1 {
+        color: #ff2b2b;
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    #about p {
+        max-width: 700px;
+        margin: 10px auto;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #444;
+    }
+
+    #about h3 {
+        color: #ff2b2b;
+        margin-top: 30px;
+    }
+
+    #about .skills {
+        list-style: none;
+        padding: 0;
+    }
+
+    #about .skills li {
+        display: inline-block;
+        margin: 8px;
+        padding: 8px 14px;
+        background: #ff2b2b;
+        color: white;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    #about button {
+        margin-top: 25px;
+        background: #ff2b2b;
+        color: white;
+        border: none;
+        padding: 12px 26px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+</style>
+<section id="about">
+    <h1>👋 Hi, I'm Ibrahim</h1>
+
+    <p>
+        I’m a passionate web developer who loves building fast, beautiful, and money-making websites 💻🔥.
+        I help people and businesses turn ideas into real web products.
+    </p>
+
+    <p>
+        From landing pages to full web apps, I focus on clean design, performance, and user experience 🚀.
+        Coding is not just my skill — it's my daily habit 😎.
+    </p>
+
+    <h3>🛠 My Skills</h3>
+
+    <ul class="skills">
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python & Django</li>
+        <li>React Basics</li>
+        <li>Responsive Design</li>
+        <li>Backend APIs</li>
+    </ul>
+
+    <h3>💼 What I Do</h3>
+
+    <p>
+        I build:
+        business websites, personal portfolios, e-commerce stores, landing pages,
+        dashboards, and custom web apps that actually make money 💰.
+    </p>
+
+    <a href="/contact">
+        <button>Contact Me</button>
+    </a>
+</section>
+{% endblock body %}
