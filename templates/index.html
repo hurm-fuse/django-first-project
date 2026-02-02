@@ -12,7 +12,7 @@
     }
 
     #hero img {
-        width: 50%;
+        width: 40%;
         border-radius: 10px;
     }
 
@@ -115,5 +115,11 @@
         <br>
         <input type="submit" value="Send">
     </form>
+</section>
+<section id="user">
+    <h2>my love:</h2>
+    {% for name in contact %}
+    <h1 style="color: red;">{{ name }}{% if not forloop.last %},{% endif %}</h1>
+    {% endfor %}
 </section>
 {% endblock body %}

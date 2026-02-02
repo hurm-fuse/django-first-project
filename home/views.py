@@ -13,7 +13,11 @@ def index(request):
         contact.save()
         messages.success(request, "Your message has been sent!")
         return redirect('/')
-    context = {'price': "$10,000"}
+    contacts = Contact.objects.values_list('name', flat=True)
+    context = {
+        'price': "$10,000",
+        'contact': contacts
+    }
     return render(request, 'index.html', context)
 
 def about(request):
